@@ -1,14 +1,24 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Employee Management System</title>
-  </head>
-  <body>
-    <h1>Welcome to Hajas Employee Management System !</h1>
-    <p>Please choose one of the following options:</p>
-    <ul>
-      <li><a href="/registration">Employee Registration Form</a></li>
-      <li><a href="/information">View Information Of Employee</a></li>
+<head>
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-5">Welcome to the  Employee Management System!</h1>
+    <p class="lead">Please choose one of the following options:</p>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <a class="btn btn-primary" href="/registration">Register New Employee</a>
+      </li>
+      <li class="list-group-item">
+        <a class="btn btn-info" href="/information">View Information Of Employee</a>
+      </li>
     </ul>
-  </body>
+  </div>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
 </html>
+
+
