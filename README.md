@@ -26,12 +26,11 @@ The Food Ordering App is deployed using Gunicorn as the WSGI HTTP server and Ngi
 3. Install and configure MySQL to serve as the database backend.
 4. Clone the project repository to the server.
 5. Set up a virtual environment and install the required Python packages.
-6. Configure the MySQL connection settings in `config.py` file.
+6. Configure the MySQL connection
 7. Run the database migration to create the necessary tables.
 8. Use Gunicorn to run the Flask application.
-9. Configure Nginx as the reverse proxy server to handle incoming requests.
 
-Please refer to the project documentation or deployment guide for detailed instructions on each step.
+
 
 ## Contributing
 
