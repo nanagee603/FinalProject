@@ -1,53 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Employee Information</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-    <style>
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-      }
-
-      th, td {
-        padding: 8px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-      }
-
-      th {
-        background-color: #f2f2f2;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Employee Information</h1>
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Employee ID</th>
-            <th>Name</th>
-            <th>Gender</th>
-            <th>Phone Number</th>
-            <th>Birthdate</th>
-          </tr>
-        </thead>
-        <tbody>
-          {% for employee in employees %}
-          <tr>
-            <td>{{ employee[0] }}</td>
-            <td>{{ employee[1] }}</td>
-            <td>{{ employee[2] }}</td>
-            <td>{{ employee[3] }}</td>
-            <td>{{ employee[4] }}</td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-  </body>
+<head>
+  <title>Food Ordering App - Available Restaurants</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <style>
+    body {
+      background-color:lightblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mt-5">Available Restaurants</h1>
+    <table class="table mt-3">
+      <thead>
+        <tr>
+          <th>Restaurant Name</th>
+          <th>Location</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for restaurant in restaurants %}
+        <tr>
+          <td>{{ restaurant[0] }}</td>
+          <td>{{ restaurant[1] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+</body>
 </html>
-

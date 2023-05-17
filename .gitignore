@@ -1,0 +1,4 @@
+# Ignore specific files or directories
+dump.sql
+__pycache__/
+
